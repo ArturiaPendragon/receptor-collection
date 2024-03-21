@@ -2,7 +2,7 @@
 - name: Include OS-specific variables "{{ ansible_os_family }}"
   ansible.builtin.include_vars: "{{ ansible_os_family }}.yml"
   when:
-    - ansible_os_family in ['RedHat', 'Debian']
+    - ansible_os_family in ['RedHat', 'Debian', 'Suse']
 
 - name: Define podman_packages
   ansible.builtin.set_fact:
